@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '586849933896838');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=586849933896838&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeShine Auto Detailing - Premium Mobile Car Detailing in the GTA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-bg-slideshow">
+            <img src="assets/header1.jpeg" class="header-bg-slide active" alt="Car Wash 1">
+            <img src="assets/header2.jpg" class="header-bg-slide" alt="Car Wash 2">
+            <img src="assets/header3.jpg" class="header-bg-slide" alt="Car Wash 3">
+            <img src="assets/header4.jpeg" class="header-bg-slide" alt="Car Wash 4">
+        </div>
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="PrimeShine Auto Detailing Logo">
+                <span>PrimeShine Auto Detailing</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div class="hero">
+            <h1>Get Your Car Looking Brand New - Book Your Detail Today!</h1>
+            <p class="subheadline">GTA's #1 Mobile Car Detailing - We Bring the Shine to You!</p>
+            <div class="trust-bar">
+                <a href="#" class="google-reviews" target="_blank">
+                    <div class="stars">
+                        <i class="fab fa-google"></i>
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <span class="trust-text">5-Star Rated in the GTA • Trusted by 500+ Car Owners</span>
+                </a>
+            </div>
+            <div class="cta-container">
+                <button class="cta-button primary" onclick="scrollToBooking()">
+                    <i class="fas fa-car"></i>
+                    Get Your Free Quote
+                </button>
+                <button class="cta-button secondary" onclick="document.getElementById('testimonials').scrollIntoView({behavior: 'smooth'});">
+                    <i class="fas fa-images"></i>
+                    View Our Detailing Results
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Car Detailing Intro Section -->
+    <section class="mobile-detailing-intro">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h2 class="intro-headline">Mobile Car Detailing That Comes to You!</h2>
+                <p class="intro-subheadline">Save time and enjoy professional detailing right at your home or office. We bring the shine to you!</p>
+                <p class="intro-desc">Our mobile service means you don't have to worry about dropping off your car. We come to your location with all the necessary equipment to leave your vehicle spotless and looking brand new.<br></p>
+
+            </div>
+            <div class="intro-image-container">
+                <div class="intro-slider">
+                  <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                  <div class="slider-track">
+                    <div class="slide active">
+                      <img src="assets/mobile-detailing.jpeg" alt="Car 1" class="intro-image">
+                      <div class="review-badge right">
+                        <div class="review-badge-row">
+                          <img src="assets/profile-andrew.jpg" alt="Andrew H." class="review-avatar">
+                          <div class="review-badge-info">
+                            <div class="review-badge-top">
+                              <span class="reviewer-name">Andrew H.</span>
+                              <span class="review-score"><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <img src="assets/review-car.jpg" alt="Car 2" class="intro-image">
+                      <div class="review-badge right">
+                        <div class="review-badge-row">
+                          <img src="assets/profile-sarah.jpg" alt="Sarah J." class="review-avatar">
+                          <div class="review-badge-info">
+                            <div class="review-badge-top">
+                              <span class="reviewer-name">Sarah J.</span>
+                              <span class="review-score"><i class="fas fa-star"></i> 5.0</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <img src="assets/car3.jpg" alt="Car 3" class="intro-image">
+                      <div class="review-badge right">
+                        <div class="review-badge-row">
+                          <img src="assets/profile-jane.jpg" alt="Jane D." class="review-avatar">
+                          <div class="review-badge-info">
+                            <div class="review-badge-top">
+                              <span class="reviewer-name">Jane D.</span>
+                              <span class="review-score"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <img src="assets/car4.jpg" alt="Car 4" class="intro-image">
+                      <div class="review-badge right">
+                        <div class="review-badge-row">
+                          <img src="assets/profile-mike.jpg" alt="Mike B." class="review-avatar">
+                          <div class="review-badge-info">
+                            <div class="review-badge-top">
+                              <span class="reviewer-name">Mike B.</span>
+                              <span class="review-score"><i class="fas fa-star"></i> 5.0</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <img src="assets/car5.jpg" alt="Car 5" class="intro-image">
+                      <div class="review-badge right">
+                        <div class="review-badge-row">
+                          <img src="assets/profile-lisa.jpg" alt="Lisa K." class="review-avatar">
+                          <div class="review-badge-info">
+                            <div class="review-badge-top">
+                              <span class="reviewer-name">Lisa K.</span>
+                              <span class="review-score"><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+        <h2 class="section-title">How It Works – 3 Simple Steps to a Flawless Car</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h3>Select Your Service</h3>
+                <p>Choose from our premium detailing packages</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Get a Free Quote</h3>
+                <p>Instantly see your price based on your car type</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>We Come to You</h3>
+                <p>Sit back and relax while we transform your car!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <h2 class="section-title">Experience the PrimeShine Difference</h2>
+        <p class="section-subtitle">Watch how we transform your vehicle into a showroom-worthy masterpiece</p>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video id="main-video" poster="assets/video-poster.jpg">
+                    <source src="assets/presentation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">
+                    <h2>See How We Make Your Car Shine – Watch Our Process!</h2>
+                    <button class="play-button" onclick="playVideo()">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>Don't Take Our Word for It – See What Our Clients Have to Say!</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-container">
+                <!-- Testimonial cards will be dynamically added here -->
+            </div>
+            <div class="testimonial-buttons">
+                <button id="load-more-testimonials" style="display:none;align-items:center;justify-content:center;margin:2rem auto 0;cursor:pointer;background:none;border:none;font-size:2.2rem;color:#3b82f6;outline:none;transition:color 0.2s;">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <button id="show-less-testimonials" style="display:none;align-items:center;justify-content:center;margin:2rem auto 0;cursor:pointer;background:none;border:none;font-size:2.2rem;color:#3b82f6;outline:none;transition:color 0.2s;">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <h2 class="section-title">Book Your Detail</h2>
+        <p class="section-subtitle">Get your free quote in seconds</p>
+        <div class="booking-container">
+            <form id="booking-form" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <select id="vehicle-type" required>
+                            <option value="">Select vehicle type</option>
+                            <option value="coupe">Coupe</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="suv5">SUV (5-Seater)</option>
+                            <option value="suv7">SUV (7-Seater)</option>
+                            <option value="truck">Pick-Up Truck</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row" style="flex-direction: column; gap: 1rem;">
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fas fa-calendar-alt"></i></span>
+                        <input type="text" id="date-picker" placeholder="Date" required>
+                    </div>
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fas fa-clock"></i></span>
+                        <select id="time-picker" required>
+                            <option value="">Time (AM/PM)</option>
+                            <option value="07:00 AM">7:00 AM</option>
+                            <option value="07:30 AM">7:30 AM</option>
+                            <option value="08:00 AM">8:00 AM</option>
+                            <option value="08:30 AM">8:30 AM</option>
+                            <option value="09:00 AM">9:00 AM</option>
+                            <option value="09:30 AM">9:30 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="10:30 AM">10:30 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="11:30 AM">11:30 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="12:30 PM">12:30 PM</option>
+                            <option value="01:00 PM">1:00 PM</option>
+                            <option value="01:30 PM">1:30 PM</option>
+                            <option value="02:00 PM">2:00 PM</option>
+                            <option value="02:30 PM">2:30 PM</option>
+                            <option value="03:00 PM">3:00 PM</option>
+                            <option value="03:30 PM">3:30 PM</option>
+                            <option value="04:00 PM">4:00 PM</option>
+                            <option value="04:30 PM">4:30 PM</option>
+                            <option value="05:00 PM">5:00 PM</option>
+                            <option value="05:30 PM">5:30 PM</option>
+                            <option value="06:00 PM">6:00 PM</option>
+                            <option value="06:30 PM">6:30 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="service-options">
+                    <label class="service-option">
+                        <input type="checkbox" class="service-checkbox" value="ultimate">
+                        <span class="service-name">full-detail</span>
+                        <span class="service-desc">Interior & Exterior Deep Clean</span>
+                    </label>
+                    <label class="service-option">
+                        <input type="checkbox" class="service-checkbox" value="interior">
+                        <span class="service-name">Interior Detail</span>
+                        <span class="service-desc">Interior Only</span>
+                    </label>
+                    <label class="service-option">
+                        <input type="checkbox" class="service-checkbox" value="exterior">
+                        <span class="service-name">Exterior Detail</span>
+                        <span class="service-desc">Exterior Only</span>
+                    </label>
+                    <label class="service-option">
+                        <input type="checkbox" class="service-checkbox" value="correction">
+                        <span class="service-name">Paint Correction</span>
+                        <span class="service-desc">Scratch & Swirl Removal</span>
+                    </label>
+                    <label class="service-option">
+                        <input type="checkbox" class="service-checkbox" value="ceramic">
+                        <span class="service-name">Ceramic Coating</span>
+                        <span class="service-desc">Long-term protection</span>
+                    </label>
+                </div>
+                <div class="quote-display">
+                    <span class="quote-label">Your Quote</span>
+                    <span id="quote-amount" class="quote-amount">$0</span>
+                </div>
+                <button type="submit" class="book-now-btn">
+                    <i class="fas fa-car"></i>
+                    Book Now
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> 647-637-9216</p>
+                <p><i class="fas fa-clock"></i> Mon-Sat: 8AM-8PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/primeshinee_/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PrimeShine Auto Detailing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Details Modal -->
+    <div id="booking-modal" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <button class="modal-close" id="close-modal">&times;</button>
+        <h3>Complete Your Booking</h3>
+        <form id="modal-form">
+          <div class="modal-form-group">
+            <label for="modal-name">Name</label>
+            <input type="text" id="modal-name" required>
+          </div>
+          <div class="modal-form-group">
+            <label for="modal-phone">Phone Number</label>
+            <input type="tel" id="modal-phone" required>
+          </div>
+          <div class="modal-form-group">
+            <label for="modal-address">Address</label>
+            <input type="text" id="modal-address" required>
+          </div>
+          <div class="modal-form-group">
+            <label for="modal-message">Additional Notes (Optional)</label>
+            <textarea id="modal-message" placeholder="Any special requests or additional information you'd like us to know..."></textarea>
+          </div>
+          <button type="submit" class="book-now-btn" style="width:100%;margin-top:1.2rem;">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!-- End Booking Details Modal -->
+
+    <!-- Thank You Modal -->
+    <div id="thank-you-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content thank-you-content">
+            <div class="thank-you-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Thank You for Your Booking!</h3>
+            <p>We've received your booking request and will contact you shortly to confirm your appointment.</p>
+            <p class="response-time">We typically respond within 1-2 hours during business hours.</p>
+            <button id="close-thank-you" class="book-now-btn">Close</button>
+        </div>
+    </div>
+    <!-- End Thank You Modal -->
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
