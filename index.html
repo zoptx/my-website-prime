@@ -391,16 +391,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
-        <script>
-    // Facebook Pixel Lead event on booking form submit
-    const bookingForm = document.getElementById('booking-form');
-    if (bookingForm) {
-      bookingForm.addEventListener('submit', function() {
-        if (typeof fbq === 'function') {
-          fbq('track', 'Lead');
-        }
-      });
-    }
-    </script>
+<script>
+  const bookingForm = document.getElementById('booking-form');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // ← prevent the refresh
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+    });
+  }
+</script>
 </body>
 </html> 
