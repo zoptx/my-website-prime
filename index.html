@@ -395,10 +395,11 @@
   const bookingForm = document.getElementById('booking-form');
   if (bookingForm) {
     bookingForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // ← prevent the refresh
+      e.preventDefault();
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
       }
+      document.getElementById('booking-modal').style.display = 'flex';
     });
   }
 </script>
