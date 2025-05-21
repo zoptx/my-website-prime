@@ -384,20 +384,13 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
         <script>
+  // Facebook Pixel Lead event on booking form submit
   const bookingForm = document.getElementById('booking-form');
-
   if (bookingForm) {
-    bookingForm.addEventListener('submit', function (event) {
-      event.preventDefault(); // stop form from reloading too fast
-
+    bookingForm.addEventListener('submit', function() {
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
       }
-
-      // Optional: show thank-you modal or handle submission
-      setTimeout(() => {
-        document.getElementById('thank-you-modal').style.display = 'flex';
-      }, 300);
     });
   }
 </script>
