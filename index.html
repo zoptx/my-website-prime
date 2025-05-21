@@ -391,21 +391,55 @@
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
-  <script>
+<script>
   const bookingForm = document.getElementById('booking-form');
+  const modal = document.getElementById('booking-modal');
+  const closeModal = document.getElementById('close-modal');
+
   if (bookingForm) {
     bookingForm.addEventListener('submit', function (e) {
-      e.preventDefault(); // Prevent default form action temporarily
+      e.preventDefault();
 
-      // Trigger the Lead event
+      // Fire Facebook Lead Event
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
       }
 
-      // Allow a slight delay for pixel to fire before form is actually submitted
-      setTimeout(() => {
-        bookingForm.submit();
-      }, 300); // 300ms is enough — Facebook recommends 150–300ms
+      // Show modal instead of submitting the form
+      modal.style.display = 'flex';
+    });
+  }
+
+  // Close modal button
+  if (closeModal) {
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  }
+
+  // Optional: Close modal when clicking outside the content
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // Thank You Modal handler
+  const modalForm = document.getElementById('modal-form');
+  const thankYouModal = document.getElementById('thank-you-modal');
+  const closeThankYou = document.getElementById('close-thank-you');
+
+  if (modalForm) {
+    modalForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      modal.style.display = 'none';
+      thankYouModal.style.display = 'flex';
+    });
+  }
+
+  if (closeThankYou) {
+    closeThankYou.addEventListener('click', () => {
+      thankYouModal.style.display = 'none';
     });
   }
 </script>
