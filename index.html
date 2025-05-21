@@ -404,6 +404,7 @@
 
       // Allow a slight delay for pixel to fire before form is actually submitted
       setTimeout(() => {
+          window.location.href = '/thank-you.html';
         bookingForm.submit();
       }, 300); // 300ms is enough — Facebook recommends 150–300ms
     });
