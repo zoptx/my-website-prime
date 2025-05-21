@@ -11,8 +11,14 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '671198852372757'); // ✅ Your Pixel ID
-      fbq('track', 'PageView');       // ✅ PageView tracking
+<script>
+  fbq('init', '671198852372757');
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      fbq('track', 'PageView');
+    }, 1000); // Delay 1 second after full page load
+  });
+</script>
     </script>
     <noscript>
       <img height="1" width="1" style="display:none"
