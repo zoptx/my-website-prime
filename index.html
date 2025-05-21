@@ -1,3 +1,4 @@
+ok now the pixel works perfectly for the pageview, can we now do the pixel for the lead: 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -391,23 +392,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
-<script>
-  const bookingForm = document.getElementById('booking-form');
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', function (e) {
-      e.preventDefault(); // Prevent default form action temporarily
-
-      // Trigger the Lead event
-      if (typeof fbq === 'function') {
-        fbq('track', 'Lead');
-      }
-
-      // Allow a slight delay for pixel to fire before form is actually submitted
-      setTimeout(() => {
-        bookingForm.submit();
-      }, 300); // 300ms is enough — Facebook recommends 150–300ms
-    });
-  }
-</script>
+        <script>
+    // Facebook Pixel Lead event on booking form submit
+    const bookingForm = document.getElementById('booking-form');
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', function() {
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead');
+        }
+      });
+    }
+    </script>
 </body>
 </html> 
