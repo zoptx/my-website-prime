@@ -395,29 +395,19 @@
   const bookingForm = document.getElementById('booking-form');
   if (bookingForm) {
     bookingForm.addEventListener('submit', function (e) {
-      e.preventDefault(); // Prevent default page reload
+      e.preventDefault(); // Prevent default form action temporarily
 
-      // Trigger the Lead event for Facebook Pixel
+      // Trigger the Lead event
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
       }
 
-      // Show the booking modal instead of submitting the form
+      // Allow a slight delay for pixel to fire before form is actually submitted
       setTimeout(() => {
-        document.getElementById("booking-modal").style.display = "block";
-      }, 300);
+        bookingForm.submit();
+      }, 300); // 300ms is enough — Facebook recommends 150–300ms
     });
   }
-
-  // Close modal functionality
-  document.getElementById("close-modal").addEventListener("click", function () {
-    document.getElementById("booking-modal").style.display = "none";
-  });
-
-  // Thank-you modal close
-  document.getElementById("close-thank-you").addEventListener("click", function () {
-    document.getElementById("thank-you-modal").style.display = "none";
-  });
 </script>
 </body>
 </html> 
